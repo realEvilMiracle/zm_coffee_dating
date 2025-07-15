@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  zm-dating-bot:
+    build: .
+    container_name: zm_dating_bot
+    volumes:
+      - .:/app
+      - db_data:/app/data
+    restart: always
+    env_file:
+      - .env
+
+volumes:
+  db_data:
